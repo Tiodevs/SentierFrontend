@@ -47,7 +47,7 @@ export default function Home() {
     return (
         <div>
             <main className={styles.main}>
-                {loading ? user && <Header /> : <></>}
+            <Header /> : <></>
 
                 <section className={styles.header}>
                     <div className={styles.headeresquerda}>
