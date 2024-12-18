@@ -2,7 +2,7 @@
 
 import styles from "./page.module.scss";
 import { Header } from "./components/header";
-import { Head } from "./components/head";
+// import { Head } from "./components/head";
 import { useEffect, useState } from "react";
 import { api } from "./services/api";
 import { useRouter } from 'next/navigation';
@@ -50,7 +50,7 @@ export default function Home() {
         <div>
             <main className={styles.main}>
 
-                <Head/>
+                {/* <Head/> */}
                 <Header /> : <></>
 
                 <section className={styles.header}>
