@@ -1,5 +1,5 @@
 .mensagem {
-    padding: 100px 205px 80px 205px;
+    padding: 200px 205px 80px 205px;
 
 
     .formcontent {
@@ -66,12 +66,12 @@
                 }
     
                 h1 {
-                    font-size: 60px;
+                    font-size: 50px;
                     font-weight: 500;
                 }
     
                 p {
-                    font-size: 20px;
+                    font-size: 17px;
                     font-weight: normal !important;
                     color: var(--cinza);
     
@@ -95,7 +95,7 @@
 
 @media (max-width: 1000px){
     .mensagem{
-        padding: 100px 40px 80px 40px;
+        padding: 170px 40px 80px 40px;
         display: flex;
         
 

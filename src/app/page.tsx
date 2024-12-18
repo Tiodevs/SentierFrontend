@@ -2,10 +2,11 @@
 
 import styles from "./page.module.scss";
 import { Header } from "./components/header";
+import { Head } from "./components/head";
 import { useEffect, useState } from "react";
 import { api } from "./services/api";
 import { useRouter } from 'next/navigation';
-
+import { InstagramIcon, Linkedin } from "lucide-react";
 
 import Image from 'next/image'
 
@@ -48,7 +49,9 @@ export default function Home() {
     return (
         <div>
             <main className={styles.main}>
-            <Header /> : <></>
+
+                <Head/>
+                <Header /> : <></>
 
                 <section className={styles.header}>
                     <div className={styles.headeresquerda}>
@@ -57,7 +60,7 @@ export default function Home() {
                             soluções digitais
                         </h1>
                         <p>
-                        Especialistas em impulsionar empresas rumo ao próximo nível, conectando marketing criativo e tecnologia de ponta.
+                            Especialistas em impulsionar empresas rumo ao próximo nível, conectando marketing criativo e tecnologia de ponta.
                         </p>
                     </div>
                     <div className={styles.headerdireita}>
@@ -66,7 +69,7 @@ export default function Home() {
                         <p>entre em contato</p>
                     </div>
                 </section>
-                
+
                 <section className={styles.section}>
                     <h2>Serviços</h2>
 
@@ -104,8 +107,8 @@ export default function Home() {
                     <div className={styles.sectionmeio}>
                         <div className={styles.sectiontext}>
                             <p>A Sentier surgiu do sonho de dois amigos de infância, Felipe e William, de unir marketing e tecnologia em um único lugar. Notamos que muitas empresas precisavam contratar serviços separados para essas áreas, e decidimos simplificar esse processo.
-                            <br/> <br/>
-Oferecemos soluções digitais completas que conectam criatividade e inovação tecnológica, ajudando nossos clientes a crescer e prosperar no mundo digital. A Sentier é fruto de muita dedicação e do nosso compromisso em transformar desafios em resultados.</p>
+                                <br /> <br />
+                                Oferecemos soluções digitais completas que conectam criatividade e inovação tecnológica, ajudando nossos clientes a crescer e prosperar no mundo digital. A Sentier é fruto de muita dedicação e do nosso compromisso em transformar desafios em resultados.</p>
                         </div>
 
                         <Image
@@ -136,7 +139,7 @@ Oferecemos soluções digitais completas que conectam criatividade e inovação 
 
 
 
-        
+
 
                 <section className={styles.section}>
                     <h2>Etapas</h2>
@@ -173,19 +176,24 @@ Oferecemos soluções digitais completas que conectam criatividade e inovação 
                             Nosso contato
                         </h3>
                         <p>
-                            Mande email em <span> sentier@gmail.com</span> 
+                            Mande email em <span> sentier@gmail.com</span>
                         </p>
                         <p>
-                            Nosso número <span> (41)987208843</span> 
+                            Nosso número <span> (41)987208843</span>
                         </p>
+
+                        <div className={styles.infoicons}>
+                            <InstagramIcon size={27} color="#01DEB2" />
+                            <Linkedin size={27} color="#01DEB2" />
+                        </div>
 
                     </div>
                     <div className={styles.footerEsquerda}>
-                    <p>© 2024 sentier</p>
+                        <p>© 2024 sentier</p>
                     </div>
                 </footer>
 
-                
+
 
             </main >
         </div >
