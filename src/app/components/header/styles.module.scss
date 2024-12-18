@@ -1,0 +1,140 @@
+.headerContent {
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 40px 75px 32px 75px;
+  background-color: var(--fundopreto);
+  border-radius: 0px 0px 30px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .imgPerson {
+    border: solid 2px #01C790;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+
+  img{
+    width: 70px;
+  }
+
+  .contact {
+    
+    padding: 11px 20px;
+    border-radius: 25px;
+    background-color: var(--preto);
+    stroke: #FFFF;
+    color: var(--branco);
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 80px;
+
+    svg {
+      stroke: #FFFF;
+      width: 70px;
+    }
+
+    .active {
+      background-color: #01C790;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      border-radius: 100%;
+
+      svg {
+        stroke: var(--fundopreto);
+      }
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      border-radius: 100%;
+      stroke: #FFFF;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    button {
+      border: 0;
+      background: transparent;
+      transition: transform 0.5s;
+    }
+
+  }
+}
+
+.navmobi {
+  display: none !important
+}
+
+.btnnav {
+  display: none !important;
+}
+
+@media (max-width: 1000px) {
+  .headerContent {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 570px) {
+  .headerContent {
+    padding: 20px 15px;
+    border-radius: 0px;
+    flex-wrap: wrap;
+
+    .navmobi {
+      padding: 50px 0px;
+      height: 90vh;
+    }
+
+    .btncontact{
+      display: none;
+    }
+
+  }
+
+  .isactive {
+    display: flex !important;
+    width: 100%;
+    height: 40vh;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btnnav {
+    display: flex !important;
+  }
+
+  .navlink {
+    display: flex;
+  }
+
+  .nav {
+    display: none !important
+  }
+}
+
+@media (min-width: 1920px) {
+  .headerContainer {
+    padding: 40px 0px !important;
+    align-items: center;
+    justify-content: center;
+
+    .headerContent {
+      max-width: 1420px;
+      padding: 0px;
+    }
+  }
+}

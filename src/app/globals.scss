@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --cinza: #737373;
+    --cinza2: #c8c8c850;
+    --preto: #000000;
+    --preto2: #1A1A1A;
+    --main: #01DEB2;
+    --azul2:rgba(15, 99, 254, 0.351);
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    color: var(--preto);
+    font-family: "Manrope", sans-serif;
+}
+button {
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bolder;
+}
+
+a {
+    color: inherited;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--branco);
+    font-family: "Manrope", sans-serif;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+    font-family: "Manrope", sans-serif;
+    font: 400 1rem sans-serif;
+}

@@ -1,0 +1,324 @@
+.containerCenter {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    width: 100%;
+
+    .header {
+        padding: 50px 250px 100px 250px;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+
+        h1 {
+            font-weight: normal;
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 19px;
+            color: var(--cinza);
+        }
+
+        a {
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 50px;
+            color: var(--main);
+            border-bottom: 2px solid var(--main);
+        }
+    }
+
+    .projcts {
+        padding: 50px 250px 100px 250px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        align-items: start;
+
+        .projct {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+
+            .headerproject {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h1 {
+                    font-weight: normal;
+                    font-size: 50px;
+                }
+
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 10px;
+
+                    a {
+                        font-size: 19px;
+                        font-weight: bold;
+                        margin-top: 0px;
+                        color: var(--main);
+                        border-bottom: 2px solid var(--main);
+                    }
+                }
+            }
+
+            .fotosproject{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                .imgfotos {
+                    border-radius: 10px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            .projectfotos {
+                position: relative;
+                /* Para posicionar elementos internos corretamente */
+                overflow: hidden;
+                /* Garante que nada ultrapasse os limites */
+                border-radius: 10px;
+
+                .imgcapa {
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    transition: all 0.3s ease;
+                    /* Transição suave para o hover */
+                }
+
+                /* Sobreposição escura no hover */
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0);
+                    /* Inicialmente transparente */
+                    transition: background-color 0.3s ease;
+                    /* Transição suave */
+                    border-radius: 10px;
+                }
+
+                &:hover::after {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    /* Escurece ao passar o mouse */
+                }
+
+                /* Botão que aparece no meio */
+                .buttonOverlay {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    /* Centraliza o botão */
+                    opacity: 0;
+                    /* Inicialmente invisível */
+                    transition: opacity 0.5s ease;
+                    /* Transição suave */
+                    background-color: var(--main);
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    z-index: 2;
+                }
+
+                &:hover .buttonOverlay {
+                    opacity: 1;
+                    /* Exibe o botão no hover */
+                }
+            }
+        }
+    }
+
+
+
+}
+
+.loaderContainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--preto);
+    /* Opcional: fundo escuro */
+}
+
+.loader {
+    border: 8px solid var(--cinza2);
+    /* Cor de fundo do loader */
+    border-top: 8px solid var(--main);
+    /* Cor da parte giratória */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    /* Animação infinita */
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 570px) {
+    .content {
+        .infosprojct {
+            padding: 50px 16px 100px 16px;
+            flex-direction: column-reverse;
+
+            .capaproject {
+                width: 100%;
+            }
+
+            div {
+                width: 100%;
+                max-width: 100%;
+
+                h2 {
+                    font-size: 35px;
+                }
+
+                p {
+                    font-size: 18px;
+                    color: var(--cinza);
+                }
+            }
+        }
+
+        .capas {
+            padding: 50px 16px 100px 16px;
+            width: 100%;
+
+            .project {
+
+                .imgfotos {
+                    width: 100%;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
+@media (min-width: 570px) {
+    .content {
+        .infosprojct {
+            padding: 50px 40px 100px 40px;
+        }
+
+        .capas {
+            padding: 50px 40px 100px 40px;
+            width: 100%;
+
+            .project {
+
+                .imgfotos {
+                    width: 100%;
+                }
+            }
+        }
+
+
+    }
+}
+
+@media (min-width: 1000px) {
+    .content {
+        .infosprojct {
+            padding: 50px 250px 100px 250px;
+            display: flex;
+            flex-direction: row;
+
+            .capaproject {
+                border-radius: 10px;
+                object-fit: cover;
+                border-radius: 10px;
+                width: 500px;
+            }
+
+            div {
+                width: 600px;
+                max-width: 40%;
+
+                h2 {
+                    font-size: 35px;
+                }
+
+                p {
+                    font-size: 18px;
+                    color: var(--cinza);
+                }
+            }
+        }
+
+        .capas {
+
+
+            padding: 50px 250px 100px 250px;
+
+            .project {
+
+                .imgfotos {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .content {
+        .capas {
+            padding: 50px 0px 100px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .capasitens {
+                width: 1420px;
+                justify-content: space-between;
+            }
+        }
+
+
+    }
+}

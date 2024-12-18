@@ -1,0 +1,359 @@
+.containerCenter {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+
+    .capas {
+        padding: 50px 250px 100px 250px;
+        border-bottom: 2px solid var(--cinza2);
+
+        .capasitens {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+
+            .project {
+                position: relative;
+                /* Para posicionar elementos internos corretamente */
+                overflow: hidden;
+                /* Garante que nada ultrapasse os limites */
+                border-radius: 10px;
+
+                .imgcapa {
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    transition: all 0.3s ease;
+                    /* Transição suave para o hover */
+                }
+
+                /* Sobreposição escura no hover */
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0);
+                    /* Inicialmente transparente */
+                    transition: background-color 0.3s ease;
+                    /* Transição suave */
+                    border-radius: 10px;
+                }
+
+                &:hover::after {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    /* Escurece ao passar o mouse */
+                }
+
+                /* Botão que aparece no meio */
+                .buttonOverlay {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    /* Centraliza o botão */
+                    opacity: 0;
+                    /* Inicialmente invisível */
+                    transition: opacity 0.5s ease;
+                    /* Transição suave */
+                    background-color: var(--main);
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    z-index: 2;
+                }
+
+                &:hover .buttonOverlay {
+                    opacity: 1;
+                    /* Exibe o botão no hover */
+                }
+            }
+        }
+    }
+
+    .sobre {
+        padding: 100px 250px 80px 250px;
+        border-bottom: 2px solid var(--cinza2);
+
+        .sobrecontainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .capaperson {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .capainfo {
+            width: 50%;
+
+            h2 {
+                font-weight: bold;
+                font-size: 37px;
+                width: 660px;
+            }
+
+            p {
+                margin-top: 15px;
+                font-size: 20px;
+                font-weight: lighter !important;
+                color: var(--cinza);
+                width: 660px;
+            }
+
+            button {
+                font-size: 18px;
+                margin-top: 30px;
+                background-color: var(--preto);
+                border: none;
+                color: var(--main);
+                font-weight: 500;
+                border-bottom: 2px solid rgb(126, 39, 238);
+            }
+        }
+    }
+
+}
+
+.loaderContainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--preto);
+    /* Opcional: fundo escuro */
+}
+
+.loader {
+    border: 8px solid var(--cinza2);
+    /* Cor de fundo do loader */
+    border-top: 8px solid var(--main);
+    /* Cor da parte giratória */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    /* Animação infinita */
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 570px) {
+    .content {
+        .capas {
+            padding: 50px 16px 100px 16px;
+            width: 100%;
+
+            .project {
+
+                .imgcapa {
+                    width: 100%;
+                }
+            }
+        }
+
+        .sobre {
+            padding: 50px 16px 100px 16px;
+
+            .sobrecontainer {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+
+                .capaperson {
+                    width: 100%;
+                    margin-top: 40px;
+                    justify-content: start;
+
+                    .imgperson {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .capainfo {
+                    width: 100%;
+                    margin-top: 40px;
+                    justify-content: center;
+
+                    h2 {
+                        max-width: 100%;
+                    }
+
+                    p {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 570px) {
+    .content {
+        .capas {
+            padding: 50px 40px 100px 40px;
+            width: 100%;
+
+            .project {
+
+                .imgcapa {
+                    width: 100%;
+                }
+            }
+        }
+
+        .sobre {
+            padding: 50px 40px 100px 40px;
+
+            .sobrecontainer {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+
+                .capaperson {
+                    width: 100%;
+                    margin-top: 40px;
+                    justify-content: start;
+
+                    .imgperson {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .capainfo {
+                    width: 100%;
+                    margin-top: 40px;
+                    justify-content: center;
+
+                    h2 {
+                        max-width: 100%;
+                    }
+
+                    p {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .content {
+        .capas {
+            padding: 50px 250px 100px 250px;
+
+            .project {
+
+                .imgcapa {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+
+        .sobre {
+            padding: 50px 250px 100px 250px;
+
+            .sobrecontainer {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .capaperson {
+                    width: 560px;
+                    margin-top: 40px;
+                    justify-content: start;
+                }
+
+                .capainfo {
+                    width: 100%;
+                    margin-top: 40px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1700px) {
+    .content {
+
+        .sobre {
+            padding: 50px 250px 100px 250px;
+
+            .sobrecontainer {
+                flex-direction: row;
+
+                .capaperson {
+                    width: 560px;
+                }
+
+                .capainfo {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .content {
+        .capas {
+            padding: 50px 0px 100px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .capasitens {
+                width: 1420px;
+                justify-content: space-between;
+            }
+        }
+
+        .sobre {
+            padding: 50px 0px 100px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .sobrecontainer {
+                width: 1420px;
+                justify-content: space-between;
+            }
+        }
+    }
+}

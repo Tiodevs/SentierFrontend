@@ -1,0 +1,70 @@
+.containerCenter {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loaderContainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--preto);
+    /* Opcional: fundo escuro */
+}
+
+.loader {
+    border: 8px solid var(--cinza2);
+    /* Cor de fundo do loader */
+    border-top: 8px solid var(--main);
+    /* Cor da parte giratória */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    /* Animação infinita */
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.login{
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 50px;
+
+        input{
+            background-color: var(--preto);
+            border: none;
+            padding: 10px;
+            border: 1.2px solid var(--cinza2);
+            color: var(--cinza2);
+            border-radius: 10px;
+        }
+
+        p{
+            color: var(--cinza);
+        }
+
+        button{
+            background-color: var(--main);
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+        }
+    }
+
+}

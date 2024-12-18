@@ -1,0 +1,133 @@
+.mensagem {
+    padding: 100px 75px 80px 75px;
+
+
+    .formcontent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 600px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 50%;
+    
+            input {
+                width: 100%;
+                background-color: var(--branco);
+                border: solid 1.8px var(--preto);
+                padding: 13px 18px;
+                margin-top: 8px;
+                border-radius: 5px;
+            }
+    
+            textarea {
+                width: 100%;
+                background-color: var(--branco);
+                border: solid 1.8px var(--preto);
+                padding: 13px 18px;
+                margin-top: 8px;
+                border-radius: 5px;
+                height: 100px;
+            }
+    
+            button {
+                background-color: var(--main);
+                border: none;
+                padding: 18px 30px;
+                border-radius: 100px;
+                font-size: 15px;
+                font-weight: normal;
+                width: fit-content;
+            }
+    
+    
+    
+        }
+    
+        .infoform {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between !important;
+            align-items: start;
+            width: 50%;
+            height: 100%;
+    
+            .contntinfo {
+    
+                .infoemail {
+                    padding: 10px 0px 25px 0px;
+                    gap: 5px
+                }
+    
+                h1 {
+                    font-size: 60px;
+                    font-weight: 500;
+                }
+    
+                p {
+                    font-size: 20px;
+                    font-weight: normal !important;
+                    color: var(--cinza);
+    
+                    span {
+                        border-bottom: 2px solid var(--main);
+                    }
+                }
+    
+                .infoicons {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                }
+    
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 1000px){
+    .mensagem{
+        padding: 100px 40px 80px 40px;
+        display: flex;
+        
+
+        .formcontent {
+            display: flex;
+            flex-direction: column !important;
+            height: fit-content;
+            gap: 30px;
+            width: 100%;
+
+            form, .infoform{
+                width: 100%;
+            }
+
+            .copy{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+
+    .mensagem{
+        padding: 100px 0px 80px 0px;
+        display: flex;
+        justify-content: center;
+
+        .formcontent {
+            width: 1420px;
+    
+           
+        }
+    }
+
+    
+}
