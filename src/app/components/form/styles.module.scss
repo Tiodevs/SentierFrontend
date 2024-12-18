@@ -1,5 +1,5 @@
 .mensagem {
-    padding: 100px 75px 80px 75px;
+    padding: 100px 205px 80px 205px;
 
 
     .formcontent {
@@ -51,10 +51,12 @@
         .infoform {
             display: flex;
             flex-direction: column;
-            justify-content: space-between !important;
+            justify-content: center !important;
             align-items: start;
             width: 50%;
             height: 100%;
+
+            gap: 50px;
     
             .contntinfo {
     

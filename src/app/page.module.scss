@@ -40,7 +40,7 @@
 
 .header {
     display: flex;
-    padding: 72px 75px;
+    padding: 230px 75px 80px 75px;
     justify-content: space-between;
     align-items: end;
 }
@@ -168,7 +168,7 @@
         align-items: start;
         gap: 40px;
 
-        padding: 72px 40px;
+        padding: 230px 75px 80px 75px;
         
         .headerdireita{
             text-align: start;
@@ -178,7 +178,7 @@
 
 @media (max-width: 570px){
     .header {
-        padding: 72px 15px;
+        padding: 172px 15px 72px 15px;
     }
 
     .footer{
