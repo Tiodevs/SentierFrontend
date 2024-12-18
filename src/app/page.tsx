@@ -106,7 +106,7 @@ export default function Home() {
                         <Image
                             alt="Logo Sujeito Pizza"
                             className={styles.imgmob}
-                            src={"/capasobrenosmob.png"}
+                            src={"/capasobrenosmob.svg"}
                             width={700}
                             height={420}
                             priority={true}
