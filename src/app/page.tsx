@@ -71,18 +71,29 @@ export default function Home() {
 
                     <div className={styles.sectionmeio}>
                         <div className={styles.sectiontext}>
-                            <h3>Branding (Identidade visual)</h3>
-                            <p>Logo Design / Brand Guidelines / Collateral Design / Rebranding Services</p>
+                            <h3>Sites web</h3>
+                            <p>Site institucional / Landing page / Portifólio virtual / Sistema interno e etc.</p>
                         </div>
 
                         <div className={styles.sectiontext}>
-                            <h3>Landingpages (sites)</h3>
-                            <p>Lançamento de produto / Portfolio / </p>
+                            <h3>Branding (Identidade visual)</h3>
+                            <p>Logo / Guia de marca / Estrategia de marca e etc.</p>
                         </div>
+
+                        <div className={styles.sectiontext}>
+                            <h3>Produção de conteúdo</h3>
+                            <p>Fotos proficionais / Criação de vídeos / Posts para redes sociais e etc.</p>
+                        </div>
+
+                        <div className={styles.sectiontext}>
+                            <h3>Tráfego pago</h3>
+                            <p>Impulsionamos seu negócio com anúncios online</p>
+                        </div>
+
 
                     </div>
 
-                    <a href="/">Saiba mais</a>
+                    <a href="/contato">Saiba mais</a>
                 </section>
 
                 <section className={styles.section}>
@@ -116,7 +127,7 @@ export default function Home() {
 
                     </div>
 
-                    <a href="/">Saiba mais</a>
+                    <a href="/contato">Saiba mais</a>
                 </section>
 
                 <section className={styles.section}>
@@ -145,7 +156,7 @@ export default function Home() {
 
                     </div>
 
-                    <a href="/">Saiba mais</a>
+                    <a href="/contato">Saiba mais</a>
                 </section>
 
             </main >
