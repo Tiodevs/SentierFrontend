@@ -56,7 +56,7 @@ export default function Home() {
                             soluções digitais
                         </h1>
                         <p>
-                            Somos especializados em criar sistemas digitais para ajudar nossos clientes a atingir seus objetivos de negócios em tecnologia e marketing.
+                        Especialistas em impulsionar empresas rumo ao próximo nível, conectando marketing criativo e tecnologia de ponta.
                         </p>
                     </div>
                     <div className={styles.headerdireita}>
@@ -67,41 +67,13 @@ export default function Home() {
                 </section>
 
                 <section className={styles.section}>
-                    <h2>Serviços</h2>
-
-                    <div className={styles.sectionmeio}>
-                        <div className={styles.sectiontext}>
-                            <h3>Sites web</h3>
-                            <p>Site institucional / Landing page / Portifólio virtual / Sistema interno e etc.</p>
-                        </div>
-
-                        <div className={styles.sectiontext}>
-                            <h3>Branding (Identidade visual)</h3>
-                            <p>Logo / Guia de marca / Estrategia de marca e etc.</p>
-                        </div>
-
-                        <div className={styles.sectiontext}>
-                            <h3>Produção de conteúdo</h3>
-                            <p>Fotos proficionais / Criação de vídeos / Posts para redes sociais e etc.</p>
-                        </div>
-
-                        <div className={styles.sectiontext}>
-                            <h3>Tráfego pago</h3>
-                            <p>Impulsionamos seu negócio com anúncios online</p>
-                        </div>
-
-
-                    </div>
-
-                    <a href="/contato">Saiba mais</a>
-                </section>
-
-                <section className={styles.section}>
                     <h2>História</h2>
 
                     <div className={styles.sectionmeio}>
                         <div className={styles.sectiontext}>
-                            <p>A empresa começou com uma amizade de infância do Felipe Santos e o William Meneses, aos 13 anos de idade os dois começaram a jogar e gravar vídeos para o Youtube juntos, eles estudaram na mesma sala por 5 anos e tambem iam a igreja juntos. Com o passar do tempo ambos se desenvolveram, o Felipe estudou programação e o William marketing, então com 22 anos os dois decidiram criar uma empresa especializada em soluções digitais.</p>
+                            <p>A Sentier surgiu do sonho de dois amigos de infância, Felipe e William, de unir marketing e tecnologia em um único lugar. Notamos que muitas empresas precisavam contratar serviços separados para essas áreas, e decidimos simplificar esse processo.
+                            <br/> <br/>
+Oferecemos soluções digitais completas que conectam criatividade e inovação tecnológica, ajudando nossos clientes a crescer e prosperar no mundo digital. A Sentier é fruto de muita dedicação e do nosso compromisso em transformar desafios em resultados.</p>
                         </div>
 
                         <Image
@@ -131,33 +103,67 @@ export default function Home() {
                 </section>
 
                 <section className={styles.section}>
-                    <h2>Processos</h2>
+                    <h2>Serviços</h2>
 
                     <div className={styles.sectionmeio}>
                         <div className={styles.sectiontext}>
-                            <h3>01 Entender a necessidade</h3>
-                            <p>We delve deep into understanding your brand, target audience, and objectives, unraveling the insights that will shape our creative journey.</p>
+                            <h3>Sites web</h3>
+                            <p>Site institucional / Landing page / Portifólio virtual / Sistema interno e etc.</p>
                         </div>
 
                         <div className={styles.sectiontext}>
-                            <h3>02 Protótipo</h3>
-                            <p>Armed with insights, our design experts bring concepts to life, seamlessly blending aesthetics and functionality for a and user-centric.</p>
+                            <h3>Produção de conteúdo</h3>
+                            <p>Posts para redes sociais / Fotos proficionais / Criação de vídeos /  e etc.</p>
                         </div>
 
                         <div className={styles.sectiontext}>
-                            <h3>03 Feedback</h3>
-                            <p>We iterate tirelessly, refining our designs based on feedback, ensuring every pixel and interaction aligns perfectly with your brand identity and user.</p>
+                            <h3>Tráfego pago</h3>
+                            <p>Impulsionamos seu negócio com anúncios online</p>
                         </div>
 
                         <div className={styles.sectiontext}>
-                            <h3>04 Entrega do projeto</h3>
-                            <p>The culmination of our collaborative efforts results in the delivery of a polished, cohesive digital experience that not only meets but your expectations.</p>
+                            <h3>Análise de dados</h3>
+                            <p>Criação de relatórios modernos usando Power BI</p>
+                        </div>
+
+
+                    </div>
+
+                    <a href="/contato">Saiba mais</a>
+                </section>
+
+        
+
+                <section className={styles.section}>
+                    <h2>Etapas</h2>
+
+                    <div className={styles.sectionmeio}>
+                        <div className={styles.sectiontext}>
+                            <h3>01. Entender a necessidade</h3>
+                            <p>Após o seu contato, vamos dedicar nosso tempo para entender os objetivos da sua empresa e como podemos ajudá-lo(a) a alcançá-los.</p>
+                        </div>
+
+                        <div className={styles.sectiontext}>
+                            <h3>02. Encontrar o Plano Ideal</h3>
+                            <p>Vamos te ajudar a encontrar um plano de que faça sentido para o momento atual da sua empresa.</p>
+                        </div>
+
+                        <div className={styles.sectiontext}>
+                            <h3>03. Você no Próximo Nível</h3>
+                            <p>Nesta etapa, a Sentier implementará as melhores soluções para alavancar os resultados da sua empresa.</p>
+                        </div>
+
+                        <div className={styles.sectiontext}>
+                            <h3>04. Feedback e Resultados</h3>
+                            <p>Apresentaremos os resultados obtidos, analisando o progresso e alinhando estratégias para futuras melhorias.</p>
                         </div>
 
                     </div>
 
                     <a href="/contato">Saiba mais</a>
                 </section>
+
+                
 
             </main >
         </div >
