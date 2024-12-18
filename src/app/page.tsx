@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { api } from "./services/api";
 import { useRouter } from 'next/navigation';
 
+
 import Image from 'next/image'
 
 export default function Home() {
@@ -65,6 +66,37 @@ export default function Home() {
                         <p>entre em contato</p>
                     </div>
                 </section>
+                
+                <section className={styles.section}>
+                    <h2>Serviços</h2>
+
+                    <div className={styles.sectionmeio}>
+                        <div className={styles.sectiontext}>
+                            <h3>Sites web</h3>
+                            <p>Site institucional / Landing page / Portifólio virtual / Sistema interno e etc.</p>
+                        </div>
+
+                        <div className={styles.sectiontext}>
+                            <h3>Produção de conteúdo</h3>
+                            <p>Posts para redes sociais / Fotos proficionais / Criação de vídeos /  e etc.</p>
+                        </div>
+
+                        <div className={styles.sectiontext}>
+                            <h3>Tráfego pago</h3>
+                            <p>Impulsionamos seu negócio com anúncios online</p>
+                        </div>
+
+                        <div className={styles.sectiontext}>
+                            <h3>Análise de dados</h3>
+                            <p>Criação de relatórios modernos usando Power BI</p>
+                        </div>
+
+
+                    </div>
+
+                    <a href="/contato">Saiba mais</a>
+                </section>
+
 
                 <section className={styles.section}>
                     <h2>História</h2>
@@ -102,35 +134,7 @@ Oferecemos soluções digitais completas que conectam criatividade e inovação 
                     <a href="/contato">Saiba mais</a>
                 </section>
 
-                <section className={styles.section}>
-                    <h2>Serviços</h2>
 
-                    <div className={styles.sectionmeio}>
-                        <div className={styles.sectiontext}>
-                            <h3>Sites web</h3>
-                            <p>Site institucional / Landing page / Portifólio virtual / Sistema interno e etc.</p>
-                        </div>
-
-                        <div className={styles.sectiontext}>
-                            <h3>Produção de conteúdo</h3>
-                            <p>Posts para redes sociais / Fotos proficionais / Criação de vídeos /  e etc.</p>
-                        </div>
-
-                        <div className={styles.sectiontext}>
-                            <h3>Tráfego pago</h3>
-                            <p>Impulsionamos seu negócio com anúncios online</p>
-                        </div>
-
-                        <div className={styles.sectiontext}>
-                            <h3>Análise de dados</h3>
-                            <p>Criação de relatórios modernos usando Power BI</p>
-                        </div>
-
-
-                    </div>
-
-                    <a href="/contato">Saiba mais</a>
-                </section>
 
         
 
@@ -162,6 +166,24 @@ Oferecemos soluções digitais completas que conectam criatividade e inovação 
 
                     <a href="/contato">Saiba mais</a>
                 </section>
+
+                <footer className={styles.footer}>
+                    <div className={styles.footerDireita}>
+                        <h3>
+                            Nosso contato
+                        </h3>
+                        <p>
+                            Mande email em <span> sentier@gmail.com</span> 
+                        </p>
+                        <p>
+                            Nosso número <span> (41)987208843</span> 
+                        </p>
+
+                    </div>
+                    <div className={styles.footerEsquerda}>
+                    <p>© 2024 sentier</p>
+                    </div>
+                </footer>
 
                 
 
