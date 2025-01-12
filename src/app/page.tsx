@@ -70,6 +70,67 @@ export default function Home() {
                     </div>
                 </section>
 
+                <section className={styles.sectionprojetos}>
+                    <h2>Portifólio da Sentier</h2>
+                    <div className={styles.projetos}>
+                        <div className={styles.projeto}>
+                            <div className={styles.projetocapa}>
+                                <Image
+                                    alt="Logo Sujeito Pizza"
+                                    
+                                    src={"/projeto2.png"}
+                                    width={700}
+                                    height={420}
+                                    priority={true}
+                                    quality={100}
+                                />
+                            </div>
+
+                            <div className={styles.projetotext}>
+                                <p>Programação</p>
+                                <h3>Plataforma de cursos</h3>
+                            </div>
+                        </div>
+                        <div className={styles.projeto}>
+                            <div className={styles.projetocapa}>
+                                <Image
+                                    alt="Logo Sujeito Pizza"
+                                    
+                                    src={"/projeto01.png"}
+                                    width={700}
+                                    height={420}
+                                    priority={true}
+                                    quality={100}
+                                />
+                            </div>
+
+                            <div className={styles.projetotext}>
+                                <p>Programação</p>
+                                <h3>Sistema de RH</h3>
+                            </div>
+                        </div>
+                        <div className={styles.projeto}>
+                            <div className={styles.projetocapa}>
+                                <Image
+                                    alt="Logo Sujeito Pizza"
+                                    
+                                    src={"/projeto03.png"}
+                                    width={700}
+                                    height={420}
+                                    priority={true}
+                                    quality={100}
+                                />
+                            </div>
+
+                            <div className={styles.projetotext}>
+                                <p>Programação</p>
+                                <h3>Carão de visita vitual</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+
                 <section className={styles.section}>
                     <h2>Serviços</h2>
 
