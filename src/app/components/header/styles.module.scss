@@ -1,7 +1,6 @@
 .headerContent {
-  width: 100vw;
-  margin: 0 auto;
-  padding: 20px 75px 12px 75px;
+  width: 100%;
+  padding: 20px 75px;
   background-color: #ffffffea;
   border-radius: 0px 0px 30px 30px;
   display: flex;
@@ -132,13 +131,8 @@
 
 @media (min-width: 1920px) {
   .headerContainer {
-    padding: 40px 0px !important;
     align-items: center;
     justify-content: center;
 
-    .headerContent {
-      max-width: 1420px;
-      padding: 0px;
-    }
   }
 }

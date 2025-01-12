@@ -47,7 +47,7 @@ export function Header() {
           </Link> */}
 
           <Link className={isActive("/attendence") ? styles.active : styles.link} href="/contato">
-            <p>Contato</p>
+            <p>Orçamento</p>
           </Link>
         </nav>
 
@@ -60,15 +60,15 @@ export function Header() {
             <p>Projetos</p>
           </Link> */}
 
-          <Link className={isActive("/sobre") ? styles.active : styles.link} href="/sobre">
+          {/* <Link className={isActive("/sobre") ? styles.active : styles.link} href="/sobre">
             <p>Sobre</p>
-          </Link>
+          </Link> */}
 
           
         </nav>
 
         <Link href="/contato" className={styles.btncontact}>
-            <p className={styles.contact}>Contato</p>
+            <p className={styles.contact}>Orçamento</p>
         </Link>
 
         

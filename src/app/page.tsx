@@ -65,7 +65,7 @@ export default function Home() {
                     </div>
                     <div className={styles.headerdireita}>
 
-                        <p className={styles.headeremail}>sentier@contact.com</p>
+                        <p className={styles.headeremail}>sentiersm@gmail.com</p>
                         <p>entre em contato</p>
                     </div>
                 </section>
@@ -176,7 +176,7 @@ export default function Home() {
                             Nosso contato
                         </h3>
                         <p>
-                            Mande email em <span> sentier@gmail.com</span>
+                            Mande email em <span> sentiersm@gmail.com</span>
                         </p>
                         <p>
                             Nosso número <span> (41)987208843</span>
@@ -189,7 +189,7 @@ export default function Home() {
 
                     </div>
                     <div className={styles.footerEsquerda}>
-                        <p>© 2024 sentier</p>
+                        <p>© 2025 sentier</p>
                     </div>
                 </footer>
 
