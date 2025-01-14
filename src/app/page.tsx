@@ -8,6 +8,9 @@ import { api } from "./services/api";
 import { useRouter } from 'next/navigation';
 import { InstagramIcon, Linkedin } from "lucide-react";
 
+import { motion } from 'framer-motion';
+// const { scrollYProgress } = useScroll()
+
 import Image from 'next/image'
 
 export default function Home() {
@@ -53,31 +56,54 @@ export default function Home() {
                 {/* <Head/> */}
                 <Header /> : <></>
 
-                <section className={styles.header}>
-                    <div className={styles.headeresquerda}>
+                <section
+                    className={styles.header} >
+                    <motion.div className={styles.headeresquerda}
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1, delay: .5 }}
+                    >
+
                         <h1>
                             Somos a Sentier <br />
                             soluções digitais
                         </h1>
+
                         <p>
                             Especialistas em impulsionar empresas rumo ao próximo nível, conectando marketing criativo e tecnologia de ponta.
                         </p>
-                    </div>
-                    <div className={styles.headerdireita}>
+                    </motion.div>
+                    <motion.div className={styles.headerdireita}
+                        initial={{ opacity: 0, x: +100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1, delay: .5 }}
+                    >
 
                         <p className={styles.headeremail}>sentiersm@gmail.com</p>
                         <p>entre em contato</p>
-                    </div>
+                    </motion.div>
                 </section>
 
                 <section className={styles.sectionprojetos}>
-                    <h2>Portifólio da Sentier</h2>
+                    <motion.h2
+                        initial={{ opacity: 0, y: +100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1, delay: .5 }}
+                    >Portifólio da Sentier</motion.h2>
                     <div className={styles.projetos}>
-                        <div className={styles.projeto}>
+                        <motion.div className={styles.projeto}
+                            initial={{ opacity: 0, y: +100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1, delay: .5 }}
+                        >
                             <div className={styles.projetocapa}>
                                 <Image
                                     alt="Logo Sujeito Pizza"
-                                    
+
                                     src={"/projeto2.png"}
                                     width={700}
                                     height={420}
@@ -90,12 +116,17 @@ export default function Home() {
                                 <p>Programação</p>
                                 <h3>Plataforma de cursos</h3>
                             </div>
-                        </div>
-                        <div className={styles.projeto}>
+                        </motion.div>
+                        <motion.div className={styles.projeto}
+                            initial={{ opacity: 0, y: +100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1, delay: .7 }}
+                        >
                             <div className={styles.projetocapa}>
                                 <Image
                                     alt="Logo Sujeito Pizza"
-                                    
+
                                     src={"/projeto01.png"}
                                     width={700}
                                     height={420}
@@ -108,12 +139,17 @@ export default function Home() {
                                 <p>Programação</p>
                                 <h3>Sistema de RH</h3>
                             </div>
-                        </div>
-                        <div className={styles.projeto}>
+                        </motion.div>
+                        <motion.div className={styles.projeto}
+                            initial={{ opacity: 0, y: +100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1, delay: .9 }}
+                        >
                             <div className={styles.projetocapa}>
                                 <Image
                                     alt="Logo Sujeito Pizza"
-                                    
+
                                     src={"/projeto03.png"}
                                     width={700}
                                     height={420}
@@ -126,15 +162,26 @@ export default function Home() {
                                 <p>Programação</p>
                                 <h3>Carão de visita vitual</h3>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
-                    
+
                 </section>
 
-                <section className={styles.section}>
-                    <h2>Serviços</h2>
 
-                    <div className={styles.sectionmeio}>
+                <motion.section className={styles.section}>
+                    <motion.h2
+                        initial={{ opacity: 0, y: +100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1, delay: .5 }}
+                    >Serviços</motion.h2>
+
+                    <motion.div className={styles.sectionmeio}
+                        initial={{ opacity: 0, y: +100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1, delay: .9 }}
+                    >
                         <div className={styles.sectiontext}>
                             <h3>Sites web</h3>
                             <p>Site institucional / Landing page / Portifólio virtual / Sistema interno e etc.</p>
@@ -156,16 +203,32 @@ export default function Home() {
                         </div>
 
 
-                    </div>
+                    </motion.div>
 
-                    <a href="/contato">Saiba mais</a>
-                </section>
+                    <motion.a href="/contato"
+                        initial={{ opacity: 0, y: +100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1, delay: 1.3 }}
+                    >Saiba mais</motion.a>
+                </motion.section>
+
 
 
                 <section className={styles.section}>
-                    <h2>História</h2>
+                    <motion.h2
+                     initial={{ opacity: 0, y: +100 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     exit={{ opacity: 0 }}
+                     transition={{ duration: 1, delay: .5 }}
+                    >História</motion.h2>
 
-                    <div className={styles.sectionmeio}>
+                    <motion.div className={styles.sectionmeio}
+                    initial={{ opacity: 0, y: +100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1, delay: .9 }}
+                    >
                         <div className={styles.sectiontext}>
                             <p>A Sentier surgiu do sonho de dois amigos de infância, Felipe e William, de unir marketing e tecnologia em um único lugar. Notamos que muitas empresas precisavam contratar serviços separados para essas áreas, e decidimos simplificar esse processo.
                                 <br /> <br />
@@ -193,9 +256,14 @@ export default function Home() {
                         />
 
 
-                    </div>
+                    </motion.div>
 
-                    <a href="/contato">Saiba mais</a>
+                    <motion.a href="/contato"
+                    initial={{ opacity: 0, y: +100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1, delay: 1.3 }}
+                    >Saiba mais</motion.a>
                 </section>
 
 
@@ -203,9 +271,18 @@ export default function Home() {
 
 
                 <section className={styles.section}>
-                    <h2>Etapas</h2>
+                    <motion.h2
+                    initial={{ opacity: 0, y: +100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1, delay: .5 }}
+                    >Etapas</motion.h2>
 
-                    <div className={styles.sectionmeio}>
+                    <motion.div className={styles.sectionmeio}
+                    initial={{ opacity: 0, y: +100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1, delay: .9 }}>
                         <div className={styles.sectiontext}>
                             <h3>01. Entender a necessidade</h3>
                             <p>Após o seu contato, vamos dedicar nosso tempo para entender os objetivos da sua empresa e como podemos ajudá-lo(a) a alcançá-los.</p>
@@ -226,9 +303,14 @@ export default function Home() {
                             <p>Apresentaremos os resultados obtidos, analisando o progresso e alinhando estratégias para futuras melhorias.</p>
                         </div>
 
-                    </div>
+                    </motion.div>
 
-                    <a href="/contato">Saiba mais</a>
+                    <motion.a href="/contato"
+                    initial={{ opacity: 0, y: +100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1, delay: 1.3 }}
+                    >Saiba mais</motion.a>
                 </section>
 
                 <footer className={styles.footer}>

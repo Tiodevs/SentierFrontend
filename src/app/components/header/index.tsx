@@ -8,6 +8,8 @@ import Image from 'next/image'
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from 'react';
 
+import { motion } from 'framer-motion';
+
 export function Header() {
   const [isactive, setIsactive] = useState(false);
 
@@ -16,7 +18,12 @@ export function Header() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className={styles.headerContainer}>
+    <motion.header className={styles.headerContainer}
+      initial={{ opacity: 0, y: +100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1, delay: 0 }}
+    >
       <div className={styles.headerContent}>
         <Link href="/attendence">
           <Image
@@ -64,17 +71,17 @@ export function Header() {
             <p>Sobre</p>
           </Link> */}
 
-          
+
         </nav>
 
         <Link href="/contato" className={styles.btncontact}>
-            <p className={styles.contact}>Orçamento</p>
+          <p className={styles.contact}>Orçamento</p>
         </Link>
 
-        
+
 
 
       </div>
-    </header>
+    </motion.header>
   )
 }
