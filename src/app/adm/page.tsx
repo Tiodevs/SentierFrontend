@@ -41,7 +41,7 @@ export default function Project() {
     useEffect(() => {
         async function getUser() {
             try {
-                const response = await api.get("/leads");
+                const response = await api.get("http://localhost:3333/leads");
 
                 setLeads(response.data);
 
