@@ -160,7 +160,7 @@ export default function Home() {
 
                             <div className={styles.projetotext}>
                                 <p>Programação</p>
-                                <h3>Carão de visita vitual</h3>
+                                <h3>Cartão de visita vitual</h3>
                             </div>
                         </motion.div>
                     </div>

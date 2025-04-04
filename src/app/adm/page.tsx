@@ -4,9 +4,7 @@ import styles from "./page.module.scss";
 import { Header } from "../components/header";
 import { useEffect, useState } from "react";
 import { api } from "../services/api";
-import { useRouter } from 'next/navigation';
-
-import { Form } from "../components/form";
+import { div, p } from "framer-motion/client";
 
 interface Props {
     params: {
@@ -14,14 +12,13 @@ interface Props {
     }
 }
 
-export default function Project({ params }: Props) {
+export default function Project() {
 
-    const decodedId = decodeURIComponent(params.userId as string).trim()
 
     const [user, setUser] = useState<any>(null);
+    const [leads, setLeads] = useState<any>([]);
     const [loading, setLoading] = useState(false);
 
-    const router = useRouter();
 
     useEffect(() => {
         async function getUser() {
@@ -41,6 +38,24 @@ export default function Project({ params }: Props) {
         setLoading(true)
     }, [])
 
+    useEffect(() => {
+        async function getUser() {
+            try {
+                const response = await api.get("/leads");
+
+                setLeads(response.data);
+
+                console.log("Leads", response.data)
+            } catch (error) {
+                console.error("Erro ao carregar o usuário:", error);
+            }
+        }
+
+        getUser();
+
+        setLoading(true)
+    }, [])
+
     if (!loading) {
         return (
             <div className={styles.loaderContainer}>
@@ -49,72 +64,24 @@ export default function Project({ params }: Props) {
         );
     }
 
-    async function handleDeleteFoto(foto_id: any) {
-    
-        await api.delete("/foto", {
-            params: {
-                foto_id: foto_id
-            }
-        })
-        .catch((err)=>{
-            console.log(err)
-            return
-        })
-    
-    }
-
-    async function handleDeleteAlbum(album_id: any) {
-    
-        await api.delete("/album", {
-            params: {
-                album_id: album_id
-            }
-        })
-        .catch((err)=>{
-            console.log(err)
-            return
-        })
-    
-    }
-
-    
     return (
         <div>
-            <main className={styles.main}>
-                {loading ? user && <Header /> : <></>}
-
-                {loading ? user && <div className={styles.content}>
-
-                    <div className={styles.header}>
-                        <h1>Painel de administrador</h1>
-                        <p>Configura sua plataforma aqui</p>
-                        <a href="/adm/createalbum" className={styles.btn}>CRIAR ALBUM</a>
-                    </div>
-
-                    <div className={styles.projcts}>
-
-                        {user.album.map((item: any) => <div className={styles.projct}>
-                            <div className={styles.headerproject}>
-                                <h1>{item.titulo}</h1>
-                                <div className={styles.btnsproject}>
-                                    <a href={`/adm/addphoto/${item.id}`} className={styles.btn}>Adicionar foto</a>
-                                    <a href={`/adm/editalbum/${item.id}`} className={styles.btn}>Editar album</a>
-                                    <a href="" className={styles.btn} onClick={() => handleDeleteAlbum(item.id)}>Deletar</a>
-                                </div>
-
-                            </div>
-                            <div className={styles.fotosproject}>
-                                {item.fotos.map((item:any) => <div className={styles.projectfotos}>
-                                    <img src={item.foto} alt="" className={styles.imgfotos} />
-                                    <button className={styles.buttonOverlay} onClick={() => handleDeleteFoto(item.id)}>Exluir</button>
-                                </div>)}
-                            </div>
-                        </div>)}
-
-                    </div>
-
-                </div> : <></>}
-            </main >
+            <Header/>
+            {leads.length > 0 ?(
+                <div className={styles.leadsList}>
+                    {leads.map((lead: any) => (
+                <div key={lead.id} id={styles.lead}>
+                    <h3>{lead.nome}</h3>
+                    <p><strong>Número:</strong> {lead.numero}</p>
+                    <p><strong>Mensagem:</strong> {lead.mensagem}</p>
+                    <p><strong>Criado em:</strong> {new Date(lead.createdAt).toLocaleString()}</p>
+                </div>
+            ))}
+                </div>
+            ): (
+                <p>Nelhum lead encontrado</p>
+            )}
+        
         </div >
     );
 }
