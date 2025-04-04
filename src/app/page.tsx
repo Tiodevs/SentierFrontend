@@ -237,7 +237,7 @@ export default function Home() {
 
                         <Image
                             alt="Capa sobre nós"
-                            src={"/capasobrenos.png"}
+                            src={"/capasobrenosfix.png"}
                             className={styles.img}
                             width={400}
                             height={1000}
