@@ -236,7 +236,7 @@ export default function Home() {
                         </div>
 
                         <Image
-                            alt="Logo Sujeito Pizza"
+                            alt="Capa sobre nós"
                             src={"/capasobrenos.png"}
                             className={styles.img}
                             width={400}
@@ -246,7 +246,7 @@ export default function Home() {
                         />
 
                         <Image
-                            alt="Logo Sujeito Pizza"
+                            alt="Capa sobre nós mobi"
                             className={styles.imgmob}
                             src={"/capasobrenosmob.svg"}
                             width={700}
